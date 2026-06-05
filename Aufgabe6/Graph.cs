@@ -71,6 +71,55 @@ public class Graph
         }
     }
 
+    public void Prim(Node start)
+    {
+        var distance = new Dictionary<Node, int>();
+        var previous = new Dictionary<Node, Node>();
+        var visited = new HashSet<Node>();
+
+        foreach (var node in Nodes)
+        {
+            distance[node] = int.MaxValue;
+            previous[node] = null;
+        }
+
+        distance[start] = 0;
+
+        while (visited.Count < Nodes.Count)
+        {
+            var current = GetUnvisitedMinDistance(distance, visited);
+
+            if (current is null)
+            {
+                break;
+            }
+
+            visited.Add(current);
+
+            foreach (var edge in current.Edges)
+            {
+                if (!visited.Contains(edge.Target))
+                {
+                    int newDistance = edge.Weight;
+
+                    if (newDistance < distance[edge.Target])
+                    {
+                        distance[edge.Target] = newDistance;
+                        previous[edge.Target] = current;
+                    }
+                }
+            }
+        }
+
+        foreach (var node in Nodes)
+        {
+            if (previous[node] != null)
+            { 
+                Console.WriteLine($"{previous[node].Value} -- {distance[node]} --> {node.Value}"); 
+            }           
+        }
+    }
+
     private Node GetUnvisitedMinDistance(Dictionary<Node, int> distance, HashSet<Node> visited)
     {
         Node minNode = null;

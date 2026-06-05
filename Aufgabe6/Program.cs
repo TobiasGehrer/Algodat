@@ -26,6 +26,10 @@ public class Program
         graph.AddEdge(c, e, 10);
         graph.AddEdge(d, e, 2);
 
+        Console.WriteLine("Dijkstra:");
         graph.Dijkstra(a);
+
+        Console.WriteLine("\nPrim:");
+        graph.Prim(a);
     }
 }
