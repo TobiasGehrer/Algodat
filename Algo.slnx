@@ -1,7 +1,14 @@
 <Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
   <Project Path="Aufgabe1/Aufgabe2.csproj" Id="8d75722d-cfbf-4d79-8a3b-c22be507f388" />
   <Project Path="Aufgabe3/Aufgabe3.csproj" Id="6fd95f60-7fa9-48a9-8f93-895ffe3afcd0" />
   <Project Path="Aufgabe4/Aufgabe4.csproj" Id="0e57434f-78ef-479e-80f7-f8830aeaf33c" />
   <Project Path="Aufgabe5/Aufgabe5.csproj" Id="7504f0fd-5f93-4336-9008-59e943514b2e" />
   <Project Path="Aufgabe6/Aufgabe6.csproj" Id="bc28c57d-c5f4-42ef-8a10-8350cc0ef31c" />
+  <Project Path="Aufgabe7/Aufgabe7.csproj" Id="a328b2b3-7b2d-445a-b68a-0c5a3be45455" />
+  <Project Path="Aufgabe8/Aufgabe8.csproj" Id="3c56c135-fdca-42ae-bf52-9cb85810866f" />
 </Solution>
